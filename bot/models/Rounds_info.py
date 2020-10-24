@@ -4,7 +4,7 @@ from sqlalchemy import Column, Integer, String, Numeric, SMALLINT
 Base = declarative_base()
 
 class Rounds_info(Base):
-    __tablename__ = 'users_info'
+    __tablename__ = 'rounds_info'
 
     round_id = Column(Integer, primary_key=True, nullable= False, unique=True)
     games_id = Column(Integer, primary_key=True, nullable= False, unique=True)
