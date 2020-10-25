@@ -5,10 +5,10 @@ from dotenv import load_dotenv
 load_dotenv('.env')
 
 TELEGRAM_BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
-USERNAME = os.environ.get('USERNAME')
-SERVER = os.environ.get('SERVER')
+DB_USERNAME = os.environ.get('DB_USERNAME')
+DB_HOST = os.environ.get('DB_HOST')
 PORT = os.environ.get('PORT')
 DB_NAME = os.environ.get('DB_NAME')
 PASSWORD = os.environ.get('PASSWORD')
 
-print(TELEGRAM_BOT_TOKEN, USERNAME, SERVER, PORT, DB_NAME, PASSWORD)
+print(TELEGRAM_BOT_TOKEN, DB_USERNAME, DB_HOST, PORT, DB_NAME, PASSWORD)
