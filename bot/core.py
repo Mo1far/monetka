@@ -14,4 +14,5 @@ bot = Bot(token=TELEGRAM_BOT_TOKEN, parse_mode='HTML')
 dp = Dispatcher(bot=bot, storage=MemoryStorage())
 executor = Executor(dp, skip_updates=True)
 
+
 engine = create_engine(f'postgresql://{DB_USERNAME}:{PASSWORD}@{DB_HOST}:{PORT}/{DB_NAME}')
