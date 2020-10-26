@@ -4,8 +4,8 @@ from sqlalchemy import Column, Integer, String, Numeric
 Base = declarative_base()
 
 class Users(Base):
-    __tablename__ = 'users'
+    __tablename__ = 'wallet'
 
-    telegram_id = Column(Integer, primary_key=True, nullable= False, unique=True)
-    username = Column(String(20), unique=True, nullable= False)
-    balance =Column(Numeric(10, 5), nullable=False)
+    id = Column(Integer, primary_key=True, nullable= False, unique=True)
+    telegram_id = Column(Integer, nullable= False, unique=True)
+    adress = Column(String(255), nullable=False)

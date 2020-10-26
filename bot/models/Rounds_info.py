@@ -6,11 +6,11 @@ Base = declarative_base()
 class Rounds_info(Base):
     __tablename__ = 'rounds_info'
 
-    round_id = Column(Integer, primary_key=True, nullable= False, unique=True)
-    games_id = Column(Integer, primary_key=True, nullable= False, unique=True)
-    creator_telegram_id = Column(Integer, primary_key=True, nullable= False, unique=True)
-    color_wictory = Column(String(5),nullable= False)
+    round_id = Column(Integer, primary_key=True, nullable=False, unique=True)
+    games_id = Column(Integer, primary_key=True, nullable=False)
+    creator_telegram_id = Column(Integer, primary_key=True, nullable=False)
+    color_victory = Column(String(5),nullable=False)
     block_num = Column(SMALLINT, nullable=False)
-    block_height = Column(String,nullable= False)
+    block_height = Column(String(255), nullable=False)
     balance = Column(Numeric(19, 5), nullable=False)
     winner_telegram_id = Column(Integer, nullable=False)
