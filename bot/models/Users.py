@@ -8,4 +8,4 @@ class Users(Base):
 
     telegram_id = Column(Integer, primary_key=True, nullable= False, unique=True)
     username = Column(String(20), unique=True, nullable= False)
-    balance =Column(Numeric(10, 5), nullable=False)
+    balance =Column(Numeric(19, 7), nullable=False)
