@@ -1381,18 +1381,18 @@ false posix/WET
 false posix/Zulu
 true posixrules
 </TimeZones>
-      <StartupTime>1603750873</StartupTime>
+      <StartupTime>1603818684</StartupTime>
     </root>
     <database id="2" parent="1" name="monetka">
       <ObjectId>16384</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>628</IntrospectionStateNumber>
+      <IntrospectionStateNumber>672</IntrospectionStateNumber>
       <Current>1</Current>
-      <Relations>sequence|table|16580|16582|1
-sequence|table|16590|16592|1
-sequence|table|16609|16611|1
-sequence|table|16619|16621|1
-sequence|table|16631|16633|1
+      <Relations>sequence|table|16685|16687|1
+sequence|table|16695|16697|1
+sequence|table|16712|16714|1
+sequence|table|16722|16724|1
+sequence|table|16734|16736|1
 </Relations>
     </database>
     <database id="3" parent="1" name="postgres">
@@ -1449,7 +1449,7 @@ sequence|table|16631|16633|1
       <Comment>standard public schema</Comment>
       <StateNumber>287</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>629</IntrospectionStateNumber>
+      <IntrospectionStateNumber>673</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="16" parent="2" name="heap">
@@ -1520,75 +1520,75 @@ sequence|table|16631|16633|1
     <language id="26" parent="2" name="plpgsql"/>
     <language id="27" parent="2" name="sql"/>
     <sequence id="28" parent="15" name="games_id_seq">
-      <ObjectId>16580</ObjectId>
+      <ObjectId>16685</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>610</StateNumber>
+      <StateNumber>648</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
     <sequence id="29" parent="15" name="rounds_info_round_id_seq">
-      <ObjectId>16590</ObjectId>
+      <ObjectId>16695</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>611</StateNumber>
+      <StateNumber>649</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
     <sequence id="30" parent="15" name="transactions_id_seq">
-      <ObjectId>16631</ObjectId>
+      <ObjectId>16734</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>615</StateNumber>
+      <StateNumber>653</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
     <sequence id="31" parent="15" name="transfer_id_seq">
-      <ObjectId>16619</ObjectId>
+      <ObjectId>16722</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>614</StateNumber>
+      <StateNumber>652</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
     <sequence id="32" parent="15" name="wallet_id_seq">
-      <ObjectId>16609</ObjectId>
+      <ObjectId>16712</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>613</StateNumber>
+      <StateNumber>651</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
     <table id="33" parent="15" name="games">
-      <ObjectId>16582</ObjectId>
+      <ObjectId>16687</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>616</StateNumber>
+      <StateNumber>654</StateNumber>
     </table>
     <table id="34" parent="15" name="rounds_info">
-      <ObjectId>16592</ObjectId>
+      <ObjectId>16697</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>616</StateNumber>
+      <StateNumber>654</StateNumber>
     </table>
     <table id="35" parent="15" name="tokens">
-      <ObjectId>16600</ObjectId>
+      <ObjectId>16705</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>621</StateNumber>
+      <StateNumber>659</StateNumber>
     </table>
     <table id="36" parent="15" name="transactions">
-      <ObjectId>16633</ObjectId>
+      <ObjectId>16736</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>620</StateNumber>
+      <StateNumber>658</StateNumber>
     </table>
     <table id="37" parent="15" name="transfer">
-      <ObjectId>16621</ObjectId>
+      <ObjectId>16724</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>619</StateNumber>
+      <StateNumber>657</StateNumber>
     </table>
     <table id="38" parent="15" name="users">
-      <ObjectId>16573</ObjectId>
+      <ObjectId>16678</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>617</StateNumber>
+      <StateNumber>655</StateNumber>
     </table>
     <table id="39" parent="15" name="wallet">
-      <ObjectId>16611</ObjectId>
+      <ObjectId>16714</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>618</StateNumber>
+      <StateNumber>656</StateNumber>
     </table>
     <column id="40" parent="33" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>610</StateNumber>
+      <StateNumber>648</StateNumber>
       <DefaultExpression>nextval(&apos;games_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
@@ -1596,49 +1596,49 @@ sequence|table|16631|16633|1
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>610</StateNumber>
+      <StateNumber>648</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="42" parent="33" name="token_type">
       <Position>3</Position>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>610</StateNumber>
+      <StateNumber>648</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <index id="43" parent="33" name="games_pkey">
-      <ObjectId>16586</ObjectId>
-      <StateNumber>610</StateNumber>
+      <ObjectId>16691</ObjectId>
+      <StateNumber>648</StateNumber>
       <ColNames>id
 telegram_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
     <index id="44" parent="33" name="games_id_key">
-      <ObjectId>16588</ObjectId>
-      <StateNumber>610</StateNumber>
+      <ObjectId>16693</ObjectId>
+      <StateNumber>648</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="45" parent="33" name="games_pkey">
-      <ObjectId>16587</ObjectId>
-      <StateNumber>610</StateNumber>
+      <ObjectId>16692</ObjectId>
+      <StateNumber>648</StateNumber>
       <ColNames>id
 telegram_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>games_pkey</UnderlyingIndexName>
     </key>
     <key id="46" parent="33" name="games_id_key">
-      <ObjectId>16589</ObjectId>
-      <StateNumber>610</StateNumber>
+      <ObjectId>16694</ObjectId>
+      <StateNumber>648</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>games_id_key</UnderlyingIndexName>
     </key>
     <foreign-key id="47" parent="33" name="fkgames491336">
-      <ObjectId>16648</ObjectId>
-      <StateNumber>617</StateNumber>
+      <ObjectId>16751</ObjectId>
+      <StateNumber>655</StateNumber>
       <ColNames>telegram_id</ColNames>
-      <RefTableId>16573</RefTableId>
+      <RefTableId>16678</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>users</RefTableName>
       <RefKeyName>users_pkey</RefKeyName>
@@ -1648,7 +1648,7 @@ telegram_id</ColNames>
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>611</StateNumber>
+      <StateNumber>649</StateNumber>
       <DefaultExpression>nextval(&apos;rounds_info_round_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
@@ -1656,54 +1656,54 @@ telegram_id</ColNames>
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>611</StateNumber>
+      <StateNumber>649</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="50" parent="34" name="telegram_id">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>611</StateNumber>
+      <StateNumber>649</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="51" parent="34" name="color_victory">
+    <column id="51" parent="34" name="color_wictory">
       <Position>4</Position>
       <DataType>varchar(5)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>627</StateNumber>
+      <StateNumber>649</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="52" parent="34" name="block_num">
       <Position>5</Position>
       <DataType>smallint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>611</StateNumber>
+      <StateNumber>649</StateNumber>
       <TypeId>21</TypeId>
     </column>
     <column id="53" parent="34" name="block_height">
       <Position>6</Position>
       <DataType>varchar(60)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>611</StateNumber>
+      <StateNumber>649</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="54" parent="34" name="balance">
       <Position>7</Position>
       <DataType>numeric(19,7 digit)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>611</StateNumber>
+      <StateNumber>649</StateNumber>
       <TypeId>1700</TypeId>
     </column>
     <column id="55" parent="34" name="vinner_id">
       <Position>8</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>611</StateNumber>
+      <StateNumber>649</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <index id="56" parent="34" name="rounds_info_pkey">
-      <ObjectId>16596</ObjectId>
-      <StateNumber>611</StateNumber>
+      <ObjectId>16701</ObjectId>
+      <StateNumber>649</StateNumber>
       <ColNames>round_id
 games_id
 telegram_id</ColNames>
@@ -1711,14 +1711,14 @@ telegram_id</ColNames>
       <Primary>1</Primary>
     </index>
     <index id="57" parent="34" name="rounds_info_round_id_key">
-      <ObjectId>16598</ObjectId>
-      <StateNumber>611</StateNumber>
+      <ObjectId>16703</ObjectId>
+      <StateNumber>649</StateNumber>
       <ColNames>round_id</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="58" parent="34" name="rounds_info_pkey">
-      <ObjectId>16597</ObjectId>
-      <StateNumber>611</StateNumber>
+      <ObjectId>16702</ObjectId>
+      <StateNumber>649</StateNumber>
       <ColNames>round_id
 games_id
 telegram_id</ColNames>
@@ -1726,17 +1726,17 @@ telegram_id</ColNames>
       <UnderlyingIndexName>rounds_info_pkey</UnderlyingIndexName>
     </key>
     <key id="59" parent="34" name="rounds_info_round_id_key">
-      <ObjectId>16599</ObjectId>
-      <StateNumber>611</StateNumber>
+      <ObjectId>16704</ObjectId>
+      <StateNumber>649</StateNumber>
       <ColNames>round_id</ColNames>
       <UnderlyingIndexName>rounds_info_round_id_key</UnderlyingIndexName>
     </key>
     <foreign-key id="60" parent="34" name="fkrounds_inf287208">
-      <ObjectId>16643</ObjectId>
-      <StateNumber>616</StateNumber>
+      <ObjectId>16746</ObjectId>
+      <StateNumber>654</StateNumber>
       <ColNames>games_id
 telegram_id</ColNames>
-      <RefTableId>16582</RefTableId>
+      <RefTableId>16687</RefTableId>
       <RefColPositions>1,2</RefColPositions>
       <RefTableName>games</RefTableName>
       <RefKeyName>games_pkey</RefKeyName>
@@ -1747,133 +1747,128 @@ telegram_id</RefColNames>
       <Position>1</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>612</StateNumber>
+      <StateNumber>650</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="62" parent="35" name="wallet_id">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>612</StateNumber>
+      <StateNumber>650</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="63" parent="35" name="ticker">
       <Position>3</Position>
       <DataType>varchar(5)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>612</StateNumber>
+      <StateNumber>650</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="64" parent="35" name="token_type">
       <Position>4</Position>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>612</StateNumber>
+      <StateNumber>650</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="65" parent="35" name="tokens_pkey">
-      <ObjectId>16603</ObjectId>
-      <StateNumber>612</StateNumber>
+    <column id="65" parent="35" name="balance">
+      <Position>5</Position>
+      <DataType>numeric(19,7 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>650</StateNumber>
+      <TypeId>1700</TypeId>
+    </column>
+    <index id="66" parent="35" name="tokens_pkey">
+      <ObjectId>16708</ObjectId>
+      <StateNumber>650</StateNumber>
       <ColNames>token
 wallet_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <index id="66" parent="35" name="tokens_token_key">
-      <ObjectId>16605</ObjectId>
-      <StateNumber>612</StateNumber>
+    <index id="67" parent="35" name="tokens_token_key">
+      <ObjectId>16710</ObjectId>
+      <StateNumber>650</StateNumber>
       <ColNames>token</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="67" parent="35" name="tokens_ticker_key">
-      <ObjectId>16607</ObjectId>
-      <StateNumber>612</StateNumber>
-      <ColNames>ticker</ColNames>
-      <Unique>1</Unique>
-    </index>
     <key id="68" parent="35" name="tokens_pkey">
-      <ObjectId>16604</ObjectId>
-      <StateNumber>612</StateNumber>
+      <ObjectId>16709</ObjectId>
+      <StateNumber>650</StateNumber>
       <ColNames>token
 wallet_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>tokens_pkey</UnderlyingIndexName>
     </key>
     <key id="69" parent="35" name="tokens_token_key">
-      <ObjectId>16606</ObjectId>
-      <StateNumber>612</StateNumber>
+      <ObjectId>16711</ObjectId>
+      <StateNumber>650</StateNumber>
       <ColNames>token</ColNames>
       <UnderlyingIndexName>tokens_token_key</UnderlyingIndexName>
     </key>
-    <key id="70" parent="35" name="tokens_ticker_key">
-      <ObjectId>16608</ObjectId>
-      <StateNumber>612</StateNumber>
-      <ColNames>ticker</ColNames>
-      <UnderlyingIndexName>tokens_ticker_key</UnderlyingIndexName>
-    </key>
-    <foreign-key id="71" parent="35" name="fktokens290167">
-      <ObjectId>16668</ObjectId>
-      <StateNumber>621</StateNumber>
+    <foreign-key id="70" parent="35" name="fktokens290167">
+      <ObjectId>16771</ObjectId>
+      <StateNumber>659</StateNumber>
       <ColNames>wallet_id</ColNames>
-      <RefTableId>16611</RefTableId>
+      <RefTableId>16714</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>wallet</RefTableName>
       <RefKeyName>wallet_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="72" parent="36" name="id">
+    <column id="71" parent="36" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>615</StateNumber>
+      <StateNumber>653</StateNumber>
       <DefaultExpression>nextval(&apos;transactions_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="73" parent="36" name="telegram_id">
+    <column id="72" parent="36" name="telegram_id">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>615</StateNumber>
+      <StateNumber>653</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="74" parent="36" name="token">
+    <column id="73" parent="36" name="token">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>615</StateNumber>
+      <StateNumber>653</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="75" parent="36" name="wallet_id">
+    <column id="74" parent="36" name="wallet_id">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>615</StateNumber>
+      <StateNumber>653</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="76" parent="36" name="balance">
+    <column id="75" parent="36" name="balance">
       <Position>5</Position>
       <DataType>numeric(19,7 digit)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>615</StateNumber>
+      <StateNumber>653</StateNumber>
       <TypeId>1700</TypeId>
     </column>
-    <column id="77" parent="36" name="adress">
+    <column id="76" parent="36" name="adress">
       <Position>6</Position>
       <DataType>varchar(60)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>615</StateNumber>
+      <StateNumber>653</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="78" parent="36" name="hash">
+    <column id="77" parent="36" name="hash">
       <Position>7</Position>
       <DataType>varchar(60)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>615</StateNumber>
+      <StateNumber>653</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="79" parent="36" name="transactions_pkey">
-      <ObjectId>16637</ObjectId>
-      <StateNumber>615</StateNumber>
+    <index id="78" parent="36" name="transactions_pkey">
+      <ObjectId>16740</ObjectId>
+      <StateNumber>653</StateNumber>
       <ColNames>id
 telegram_id
 token
@@ -1881,21 +1876,21 @@ wallet_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <index id="80" parent="36" name="transactions_id_key">
-      <ObjectId>16639</ObjectId>
-      <StateNumber>615</StateNumber>
+    <index id="79" parent="36" name="transactions_id_key">
+      <ObjectId>16742</ObjectId>
+      <StateNumber>653</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="81" parent="36" name="transactions_hash_key">
-      <ObjectId>16641</ObjectId>
-      <StateNumber>615</StateNumber>
+    <index id="80" parent="36" name="transactions_hash_key">
+      <ObjectId>16744</ObjectId>
+      <StateNumber>653</StateNumber>
       <ColNames>hash</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="82" parent="36" name="transactions_pkey">
-      <ObjectId>16638</ObjectId>
-      <StateNumber>615</StateNumber>
+    <key id="81" parent="36" name="transactions_pkey">
+      <ObjectId>16741</ObjectId>
+      <StateNumber>653</StateNumber>
       <ColNames>id
 telegram_id
 token
@@ -1903,226 +1898,226 @@ wallet_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>transactions_pkey</UnderlyingIndexName>
     </key>
-    <key id="83" parent="36" name="transactions_id_key">
-      <ObjectId>16640</ObjectId>
-      <StateNumber>615</StateNumber>
+    <key id="82" parent="36" name="transactions_id_key">
+      <ObjectId>16743</ObjectId>
+      <StateNumber>653</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>transactions_id_key</UnderlyingIndexName>
     </key>
-    <key id="84" parent="36" name="transactions_hash_key">
-      <ObjectId>16642</ObjectId>
-      <StateNumber>615</StateNumber>
+    <key id="83" parent="36" name="transactions_hash_key">
+      <ObjectId>16745</ObjectId>
+      <StateNumber>653</StateNumber>
       <ColNames>hash</ColNames>
       <UnderlyingIndexName>transactions_hash_key</UnderlyingIndexName>
     </key>
-    <foreign-key id="85" parent="36" name="fktransactio512203">
-      <ObjectId>16663</ObjectId>
-      <StateNumber>620</StateNumber>
+    <foreign-key id="84" parent="36" name="fktransactio512203">
+      <ObjectId>16766</ObjectId>
+      <StateNumber>658</StateNumber>
       <ColNames>telegram_id</ColNames>
-      <RefTableId>16573</RefTableId>
+      <RefTableId>16678</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>users</RefTableName>
       <RefKeyName>users_pkey</RefKeyName>
       <RefColNames>telegram_id</RefColNames>
     </foreign-key>
-    <foreign-key id="86" parent="36" name="fktransactio777942">
-      <ObjectId>16673</ObjectId>
-      <StateNumber>622</StateNumber>
+    <foreign-key id="85" parent="36" name="fktransactio777942">
+      <ObjectId>16776</ObjectId>
+      <StateNumber>660</StateNumber>
       <ColNames>token
 wallet_id</ColNames>
-      <RefTableId>16600</RefTableId>
+      <RefTableId>16705</RefTableId>
       <RefColPositions>1,2</RefColPositions>
       <RefTableName>tokens</RefTableName>
       <RefKeyName>tokens_pkey</RefKeyName>
       <RefColNames>token
 wallet_id</RefColNames>
     </foreign-key>
-    <column id="87" parent="37" name="id">
+    <column id="86" parent="37" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>614</StateNumber>
+      <StateNumber>652</StateNumber>
       <DefaultExpression>nextval(&apos;transfer_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="88" parent="37" name="telegram_id">
+    <column id="87" parent="37" name="telegram_id">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>614</StateNumber>
+      <StateNumber>652</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="89" parent="37" name="hash">
+    <column id="88" parent="37" name="hash">
       <Position>3</Position>
       <DataType>varchar(60)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>614</StateNumber>
+      <StateNumber>652</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="90" parent="37" name="balance">
+    <column id="89" parent="37" name="balance">
       <Position>4</Position>
       <DataType>numeric(19,7 digit)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>614</StateNumber>
+      <StateNumber>652</StateNumber>
       <TypeId>1700</TypeId>
     </column>
-    <column id="91" parent="37" name="id_destination">
+    <column id="90" parent="37" name="id_destination">
       <Position>5</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>614</StateNumber>
+      <StateNumber>652</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="92" parent="37" name="transfer_pkey">
-      <ObjectId>16625</ObjectId>
-      <StateNumber>614</StateNumber>
+    <index id="91" parent="37" name="transfer_pkey">
+      <ObjectId>16728</ObjectId>
+      <StateNumber>652</StateNumber>
       <ColNames>id
 telegram_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <index id="93" parent="37" name="transfer_id_key">
-      <ObjectId>16627</ObjectId>
-      <StateNumber>614</StateNumber>
+    <index id="92" parent="37" name="transfer_id_key">
+      <ObjectId>16730</ObjectId>
+      <StateNumber>652</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="94" parent="37" name="transfer_hash_key">
-      <ObjectId>16629</ObjectId>
-      <StateNumber>614</StateNumber>
+    <index id="93" parent="37" name="transfer_hash_key">
+      <ObjectId>16732</ObjectId>
+      <StateNumber>652</StateNumber>
       <ColNames>hash</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="95" parent="37" name="transfer_pkey">
-      <ObjectId>16626</ObjectId>
-      <StateNumber>614</StateNumber>
+    <key id="94" parent="37" name="transfer_pkey">
+      <ObjectId>16729</ObjectId>
+      <StateNumber>652</StateNumber>
       <ColNames>id
 telegram_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>transfer_pkey</UnderlyingIndexName>
     </key>
-    <key id="96" parent="37" name="transfer_id_key">
-      <ObjectId>16628</ObjectId>
-      <StateNumber>614</StateNumber>
+    <key id="95" parent="37" name="transfer_id_key">
+      <ObjectId>16731</ObjectId>
+      <StateNumber>652</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>transfer_id_key</UnderlyingIndexName>
     </key>
-    <key id="97" parent="37" name="transfer_hash_key">
-      <ObjectId>16630</ObjectId>
-      <StateNumber>614</StateNumber>
+    <key id="96" parent="37" name="transfer_hash_key">
+      <ObjectId>16733</ObjectId>
+      <StateNumber>652</StateNumber>
       <ColNames>hash</ColNames>
       <UnderlyingIndexName>transfer_hash_key</UnderlyingIndexName>
     </key>
-    <foreign-key id="98" parent="37" name="fktransfer272128">
-      <ObjectId>16658</ObjectId>
-      <StateNumber>619</StateNumber>
+    <foreign-key id="97" parent="37" name="fktransfer272128">
+      <ObjectId>16761</ObjectId>
+      <StateNumber>657</StateNumber>
       <ColNames>telegram_id</ColNames>
-      <RefTableId>16573</RefTableId>
+      <RefTableId>16678</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>users</RefTableName>
       <RefKeyName>users_pkey</RefKeyName>
       <RefColNames>telegram_id</RefColNames>
     </foreign-key>
-    <column id="99" parent="38" name="telegram_id">
+    <column id="98" parent="38" name="telegram_id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>609</StateNumber>
+      <StateNumber>647</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="100" parent="38" name="username">
+    <column id="99" parent="38" name="username">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>609</StateNumber>
+      <StateNumber>647</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="101" parent="38" name="balance">
-      <Position>3</Position>
-      <DataType>numeric(19,7 digit)|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>609</StateNumber>
-      <TypeId>1700</TypeId>
-    </column>
-    <index id="102" parent="38" name="users_pkey">
-      <ObjectId>16576</ObjectId>
-      <StateNumber>609</StateNumber>
+    <index id="100" parent="38" name="users_pkey">
+      <ObjectId>16681</ObjectId>
+      <StateNumber>647</StateNumber>
       <ColNames>telegram_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <index id="103" parent="38" name="users_username_key">
-      <ObjectId>16578</ObjectId>
-      <StateNumber>609</StateNumber>
+    <index id="101" parent="38" name="users_username_key">
+      <ObjectId>16683</ObjectId>
+      <StateNumber>647</StateNumber>
       <ColNames>username</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="104" parent="38" name="users_pkey">
-      <ObjectId>16577</ObjectId>
-      <StateNumber>609</StateNumber>
+    <key id="102" parent="38" name="users_pkey">
+      <ObjectId>16682</ObjectId>
+      <StateNumber>647</StateNumber>
       <ColNames>telegram_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
     </key>
-    <key id="105" parent="38" name="users_username_key">
-      <ObjectId>16579</ObjectId>
-      <StateNumber>609</StateNumber>
+    <key id="103" parent="38" name="users_username_key">
+      <ObjectId>16684</ObjectId>
+      <StateNumber>647</StateNumber>
       <ColNames>username</ColNames>
       <UnderlyingIndexName>users_username_key</UnderlyingIndexName>
     </key>
-    <column id="106" parent="39" name="id">
+    <column id="104" parent="39" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>613</StateNumber>
+      <StateNumber>651</StateNumber>
       <DefaultExpression>nextval(&apos;wallet_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="107" parent="39" name="telegram_id">
+    <column id="105" parent="39" name="telegram_id">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>613</StateNumber>
+      <StateNumber>651</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="108" parent="39" name="adress">
+    <column id="106" parent="39" name="adress">
       <Position>3</Position>
       <DataType>varchar(60)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>613</StateNumber>
+      <StateNumber>651</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="109" parent="39" name="wallet_pkey">
-      <ObjectId>16615</ObjectId>
-      <StateNumber>613</StateNumber>
+    <column id="107" parent="39" name="balance">
+      <Position>4</Position>
+      <DataType>numeric(19,7 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>651</StateNumber>
+      <TypeId>1700</TypeId>
+    </column>
+    <index id="108" parent="39" name="wallet_pkey">
+      <ObjectId>16718</ObjectId>
+      <StateNumber>651</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <index id="110" parent="39" name="wallet_adress_key">
-      <ObjectId>16617</ObjectId>
-      <StateNumber>613</StateNumber>
+    <index id="109" parent="39" name="wallet_adress_key">
+      <ObjectId>16720</ObjectId>
+      <StateNumber>651</StateNumber>
       <ColNames>adress</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="111" parent="39" name="wallet_pkey">
-      <ObjectId>16616</ObjectId>
-      <StateNumber>613</StateNumber>
+    <key id="110" parent="39" name="wallet_pkey">
+      <ObjectId>16719</ObjectId>
+      <StateNumber>651</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>wallet_pkey</UnderlyingIndexName>
     </key>
-    <key id="112" parent="39" name="wallet_adress_key">
-      <ObjectId>16618</ObjectId>
-      <StateNumber>613</StateNumber>
+    <key id="111" parent="39" name="wallet_adress_key">
+      <ObjectId>16721</ObjectId>
+      <StateNumber>651</StateNumber>
       <ColNames>adress</ColNames>
       <UnderlyingIndexName>wallet_adress_key</UnderlyingIndexName>
     </key>
-    <foreign-key id="113" parent="39" name="fkwallet804941">
-      <ObjectId>16653</ObjectId>
-      <StateNumber>618</StateNumber>
+    <foreign-key id="112" parent="39" name="fkwallet804941">
+      <ObjectId>16756</ObjectId>
+      <StateNumber>656</StateNumber>
       <ColNames>telegram_id</ColNames>
-      <RefTableId>16573</RefTableId>
+      <RefTableId>16678</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>users</RefTableName>
       <RefKeyName>users_pkey</RefKeyName>

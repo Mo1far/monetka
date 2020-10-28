@@ -1,6 +1,5 @@
 from bot.core import executor
 
-
 def start():
     executor.start_polling()
 
