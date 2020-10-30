@@ -1,7 +1,8 @@
-from . import Game
-from . import Round_info
-from . import Token
-from . import Transfer
-from . import Transaction
-from . import User
-from . import Wallet
+from . import game
+from . import rounds_info
+from . import token
+from . import transfer
+from . import transaction
+from . import user
+from . import wallet
+

@@ -1,9 +1,7 @@
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, Numeric
-from sqlalchemy import ForeignKey
 from sqlalchemy.orm import relationship
-
-Base = declarative_base()
+from sqlalchemy import ForeignKey
+from .base import Base
 
 class Transaction(Base):
     __tablename__ = 'transactions'
@@ -16,10 +14,6 @@ class Transaction(Base):
     adress = Column(String(60), nullable=False)
     hash=Column(String(60), nullable=False)
 
-    user = relationship('User', back_populates='transactions')
-    token_token = relationship("Token", back_populates='transactions_token')
-    token_wallet_id = relationship("Token", back_populates='transactions_wallet_id')
-
     def __init__(self, telegram_id, token, wallet_id, balance, adress, hash):
         self.telegram_id = telegram_id
         self.token = token
@@ -28,3 +22,6 @@ class Transaction(Base):
         self.adress = adress
         self.hash = hash
 
+
+user = relationship("User", backref="transactions")
+tokens = relationship("Token", backref="transactions")

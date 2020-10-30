@@ -1,9 +1,7 @@
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, Numeric
-from sqlalchemy import ForeignKey
 from sqlalchemy.orm import relationship
-
-Base = declarative_base()
+from sqlalchemy import ForeignKey
+from .base import Base
 
 class Transfer(Base):
     __tablename__ = 'transfer'
@@ -14,12 +12,11 @@ class Transfer(Base):
     balance =Column(Numeric(19, 7), nullable=False)
     id_destination = Column(Integer, nullable= False)
 
-    user = relationship('User', back_populates='transfers')
-
     def __init__(self, telegram_id, hash, balance, id_destination):
         self.telegram_id = telegram_id
         self.hash = hash
         self.balance = balance
         self.id_destination = id_destination
 
+user = relationship("User", backref="transfers")
 

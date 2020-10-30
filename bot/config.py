@@ -10,5 +10,3 @@ DB_HOST = os.environ.get('DB_HOST')
 PORT = os.environ.get('PORT')
 DB_NAME = os.environ.get('DB_NAME')
 PASSWORD = os.environ.get('PASSWORD')
-
-print(TELEGRAM_BOT_TOKEN, DB_USERNAME, DB_HOST, PORT, DB_NAME, PASSWORD)
