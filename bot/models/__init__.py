@@ -1,3 +1,4 @@
+from . import base
 from . import game
 from . import rounds_info
 from . import token

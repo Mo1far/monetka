@@ -9,7 +9,7 @@ class Round_info(Base):
     round_id = Column(Integer, primary_key=True, nullable=False, unique=True, autoincrement=True)
     games_id = Column(Integer, ForeignKey('games.id'), primary_key=True, nullable=False)
     telegram_id = Column(Integer, ForeignKey('games.telegram_id'), primary_key=True, nullable=False)
-    color_wictory = Column(String(5), nullable=False)
+    color_victory = Column(String(5), nullable=False)
     block_num = Column(SMALLINT, nullable=False)
     block_height = Column(String(60), nullable=False)
     balance = Column(Numeric(19, 7), nullable=False)
@@ -21,7 +21,7 @@ class Round_info(Base):
         self.round_id = round_id
         self.games_id = games_id
         self.creator_telegram_id = creator_telegram_id
-        self.color_wictory = color_victory
+        self.color_victory = color_victory
         self.block_num = block_num
         self.block_height = block_heigth
         self.balance = balance
