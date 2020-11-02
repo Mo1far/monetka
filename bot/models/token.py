@@ -2,7 +2,7 @@ from sqlalchemy import Column, Integer, String, Numeric
 from sqlalchemy.orm import relationship
 from sqlalchemy import ForeignKey
 from .base import Base
-from .token_riskpool import association_table
+from .token_riskpool import Association_table
 
 class Token(Base):
     __tablename__ = 'tokens'
@@ -13,6 +13,8 @@ class Token(Base):
     token_type = Column(String(10), nullable=False)
     balance =Column(Numeric(19, 7), nullable=False)
 
+
+
     def __init__(self, token, wallet_id, ticker, token_type, balance):
         self.token = token
         self.wallet_id = wallet_id
@@ -21,4 +23,6 @@ class Token(Base):
         self.balance = balance
 
 wallet = relationship("Wallet", backref="tokens")
-riskpool = relationship("Riskpool", secondary=association_table, back_populates="tokens")
+riskpool = relationship("Riskpool", secondary='tokens_riskpool', backref="tokens", foreign_keys=('[Association_table.totens_token,'
+                                                                                                        'Association_table.tokens_wallet_id,'
+                                                                                                        'Association_table.riskpool_rp_id]'))

@@ -9,7 +9,7 @@ from bot.models.transaction import Transaction
 from bot.models.transfer import  Transfer
 from bot.models.game import Game
 from bot.models.riskpool import Riskpool
-from bot.models.token_riskpool import association_table
+from bot.models.token_riskpool import Association_table
 import bot.keyboards as kb
 
 session = Session()
@@ -61,8 +61,7 @@ async def btn_cmd_help(msg: types.Message):
             await msg.answer(f"{tok.token} --> {float(tok.balance)}")
 
         tkn_in_pool=session.query(User, Wallet, Token, Riskpool).select_from(User).join(Wallet).\
-            join(Token).join(Riskpool).filter(User.telegram_id == tg_user.id
-                                              and Riskpool.rp_id is not None).all()
+            join(Token).join(Riskpool).all()
         if (tkn_in_pool is not None) and (len(tkn_in_pool) > 0):
             for usr, wal, tok, pool in tkn_in_pool:
                 await msg.answer("On riskpool")
@@ -82,8 +81,8 @@ async def btn_cmd_help(msg: types.Message):
 
 @dp.message_handler(text="Global pool info")
 async def btn_cmd_help(msg: types.Message):
-    glb_pool = session.query(Token, Riskpool).select_from(Token.token).join(Riskpool).all()
+    glb_pool = session.query(Token, Association_table, Riskpool).select_from(Token).join(Association_table).join(Riskpool).all()
     if (glb_pool is not None) and (len(glb_pool > 0)):
-        for tk, rp in glb_pool:
+        for tk, at, rp in glb_pool:
            await msg.answer(f"{tk.token} --> {tk.balance}")
     await msg.answer(f'''Вы выбрали {msg.text}''')
